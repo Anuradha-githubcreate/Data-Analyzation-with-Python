@@ -1,4 +1,4 @@
-Importing libraries:
+**Importing libraries:**
 
 pandas library: import pandas as pd
 
@@ -12,7 +12,7 @@ import seaborn as sns
 
 
 
-Importing data to notebook:
+**Importing data to notebook:**
 
 df=pd.read_csv("heart.csv")
 
@@ -20,56 +20,56 @@ df
 
 
 
-Checking the shape (rows & columns) of data:
+**Checking the shape (rows & columns) of data:**
 
 df.shape
 
 
 
-Checking the information of data:
+**Checking the information of data:**
 
 df.info()
 
 
 
-Finding null values in data:
+**Finding null values in data:**
 
 df.isnull().sum()
 
 
 
-Finding value count of different columns:
+**Finding value count of different columns:**
 
 df["sex"].value_counts()
 
 
 
-Visualisation of column data using graph:
+**Visualisation of column data using graph:**
 
 sns.countplot(x="sex",data=df)
 
 
 
-Dropping unnecessary columns:
+**Dropping unnecessary columns:**
 
 X=df.drop("target",axis=1)
 X
 
 
 
-Defining Y
+**Defining Y**
 
 Y=df["target"]
 
 
 
-Checking the type of dependent column:
+**Checking the type of dependent column:**
 
 type(Y)
 
 
 
-Changing dependent value to frame:
+**Changing dependent value to frame:**
 
 Y=Y.to_frame()
 
@@ -77,7 +77,7 @@ Y
 
 
 
-Importing sklearn libraries (used for train-test split & for Accuracy):
+**Importing sklearn libraries (used for train-test split & for Accuracy):**
 
 from sklearn.model_selection import train_test_split
 
@@ -91,7 +91,7 @@ from sklearn.metrics import accuracy_score
 
 
 
-Testing & training model:
+**Testing & training model:**
 
 X_train,X_test,Y_train,Y_test=train_test_split(X,Y,test_size=0.3)
 
@@ -105,7 +105,7 @@ print("shape of Y_test : ",Y_test.shape)
 
 
 
-Accuracy using Linear Regression:
+**Accuracy using Linear Regression:**
 
 regressor=LinearRegression()
 
@@ -121,7 +121,7 @@ print("Accuracy : ",r2_train*100)
 
 
 
-Accuracy using Random Forest Classifier:
+**Accuracy using Random Forest Classifier:**
 
 model=RandomForestClassifier()
 
@@ -135,7 +135,7 @@ print("Accuracy :", accuracy*100,"%")
 
 
 
-Accuracy using SVC:
+**Accuracy using SVC:**
 
 from sklearn.svm import SVC
 
